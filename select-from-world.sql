@@ -35,5 +35,22 @@ SELECT name
 FROM world
 WHERE name LIKE ('%united%');
 
+-- Two ways to be big
+-- 7. Two ways to be big: A country is big if it has an area of more than 3 million sq km or it has a population of more than 250 million.
+-- Show the countries that are big by area or big by population. Show name, population and area.
+SELECT name, population, area
+FROM world
+WHERE population > 250000000 OR area > 3000000
+
+
+-- One or the other (but not both)
+-- 8. Exclusive OR (XOR). Show the countries that are big by area or big by population but not both. Show name, population and area.
+SELECT name, population, area
+FROM world
+WHERE population > 250000000 XOR area > 3000000;
+
+
+
+
 
 
