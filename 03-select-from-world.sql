@@ -73,3 +73,19 @@ WHERE GDP > 1000000000000;
 SELECT name, capital
   FROM world
 WHERE LENGTH(name) = LENGTH(capital)
+
+-- Matching name and capital
+-- 12.
+-- The capital of Sweden is Stockholm. Both words start with the letter 'S'.
+-- Show the name and the capital where the first letters of each match.
+-- Don't include countries where the name and the capital are the same word.
+SELECT name,capital
+FROM world
+WHERE LEFT(name,1) = LEFT(capital,1)
+  AND name <> capital;
+
+-- All the vowels
+-- 13.
+-- Equatorial Guinea and Dominican Republic have all of the vowels (a e i o u) in the name.
+-- They don't count because they have more than one word in the name.
+-- Find the country that has all the vowels and no spaces in its name.
